@@ -1,8 +1,8 @@
 #### Startup commands
 if [[ "${TERM}" != "tmux-256color" ]]
 then
-	neofetch
-fi
+	neofetch --source ~/dotfiles/.config/neofetch/logo
+tf
 #### P10K instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
