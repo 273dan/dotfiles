@@ -1,3 +1,8 @@
+#### Startup commands
+if [[ "${TERM}" != "tmux-256color" ]]
+then
+	neofetch
+fi
 #### P10K instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -25,12 +30,8 @@ alias -g XC="| xclip -sel clip" 	# pipe to clipboard
 alias lg="ls -la | grep"		# grep file search
 alias ta="tmux a" 			# tmux attach
 
-#### Startup commands
-if [[ "${TERM}" != "tmux-256color" ]]
-then
-	neofetch
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 

@@ -2,7 +2,7 @@
 [general]
 live_config_reload = true
 import = [
-		"~/dotfiles/.config/alacritty/marine_dark.toml"
+		"~/dotfiles/.config/alacritty/everblush.toml"
 ]
 
 [window]
