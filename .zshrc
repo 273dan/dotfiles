@@ -23,7 +23,7 @@ zstyle ':completion:*' special-dirs true
 #### Aliases
 alias -g XC="| xclip -sel clip" 	# pipe to clipboard
 alias lg="ls -la | grep"		# grep file search
-alias ta ="tmux a" 			# tmux attach
+alias ta="tmux a" 			# tmux attach
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
