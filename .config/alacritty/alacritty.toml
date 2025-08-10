@@ -2,18 +2,17 @@
 [general]
 live_config_reload = true
 import = [
-		"~/dotfiles/.config/alacritty/rose_pine.toml"
+		"~/dotfiles/.config/alacritty/marine_dark.toml"
 ]
 
 [window]
 decorations = "None"
-startup_mode = "Maximized"
+dimensions = { columns = 144, lines = 36}
+opacity = 0.85
 
 [font]
 normal = {family = "FantasqueSansM Nerd Font", style="Regular"}
-size = 21
-
-
+size = 16
 
 [cursor]
 style = {shape = "Block", blinking = "Always"}

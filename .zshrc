@@ -25,6 +25,12 @@ alias -g XC="| xclip -sel clip" 	# pipe to clipboard
 alias lg="ls -la | grep"		# grep file search
 alias ta="tmux a" 			# tmux attach
 
+#### Startup commands
+if [[ "${TERM}" != "tmux-256color" ]]
+then
+	neofetch
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
