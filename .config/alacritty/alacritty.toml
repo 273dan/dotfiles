@@ -7,8 +7,9 @@ import = [
 
 [window]
 decorations = "None"
-dimensions = { columns = 144, lines = 36}
+dimensions = { columns = 150, lines = 40}
 opacity = 0.85
+padding = {x = 5, y = 3}
 
 [font]
 normal = {family = "FantasqueSansM Nerd Font", style="Regular"}

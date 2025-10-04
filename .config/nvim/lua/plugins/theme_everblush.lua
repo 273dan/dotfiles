@@ -1,6 +1,6 @@
 return {
     'everblush/nvim',
-    config = function()
-        vim.cmd('colorscheme everblush')
-    end
+    -- config = function()
+    --     vim.cmd('colorscheme everblush')
+    -- end
 }

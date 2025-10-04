@@ -16,6 +16,16 @@ return {
     config = function()
         local lspcfg = require("lspconfig")
         lspcfg.lua_ls.setup {}
+        lspcfg.rust_analyzer.setup {}
+        lspcfg.clangd.setup {}
+        lspcfg.pyright.setup {
+            settings = {
+                python = {
+                    analysis = {
+                        enableSemanticHighlighting = true,
+                    },
+            },
+        }}
 
 
     end,

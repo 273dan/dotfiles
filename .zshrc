@@ -1,8 +1,8 @@
 #### Startup commands
-if [[ "${TERM}" != "tmux-256color" ]]
+if [ "${TERM}" != "tmux-256color" ] && [ "${TERM}" != "xterm-256color" ]
 then
 	neofetch --source ~/dotfiles/.config/neofetch/logo
-tf
+fi
 #### P10K instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -27,11 +27,11 @@ zstyle ':completion:*' special-dirs true
 
 #### Aliases
 alias -g XC="| xclip -sel clip" 	# pipe to clipboard
-alias lg="ls -la | grep"		# grep file search
-alias ta="tmux a" 			# tmux attach
+alias lg="la | grep"		# grep file search
+alias ta="tmux attach-session -t" 			# tmux attach
+alias tA="tmux attach" 			# tmux attach
+alias tl="tmux ls"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
