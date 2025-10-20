@@ -1,37 +1,22 @@
-#### Startup commands
-if [ "${TERM}" != "tmux-256color" ] && [ "${TERM}" != "xterm-256color" ]
-then
-	neofetch --source ~/dotfiles/.config/neofetch/logo
-fi
-#### P10K instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
-#### Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-#### Sourcing
+# Sourcing
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 source $ZSH/oh-my-zsh.sh
-#### Plugins
+# Plugins
 plugins=(git)
 
-#### Sets and styles
+# Sets and styles
 setopt globdots
 setopt AUTO_CD
 zstyle ':completion:*' special-dirs true
 
-#### Aliases
+# Aliases
 alias -g XC="| xclip -sel clip" 	# pipe to clipboard
 alias lg="la | grep"		# grep file search
 alias ta="tmux attach-session -t" 			# tmux attach
 alias tA="tmux attach" 			# tmux attach
 alias tl="tmux ls"
 
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Starship
+eval "$(starship init zsh)"

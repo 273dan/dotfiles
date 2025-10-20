@@ -14,19 +14,10 @@ return {
         },
     },
     config = function()
-        local lspcfg = require("lspconfig")
-        lspcfg.lua_ls.setup {}
-        lspcfg.rust_analyzer.setup {}
-        lspcfg.clangd.setup {}
-        lspcfg.pyright.setup {
-            settings = {
-                python = {
-                    analysis = {
-                        enableSemanticHighlighting = true,
-                    },
-            },
-        }}
-
-
+        vim.lsp.enable("lua_ls")
+        vim.lsp.enable("rust_analyzer")
+        vim.lsp.enable("clangd")
+        vim.lsp.enable("pyright")
+        vim.lsp.enable("tinymist")
     end,
 }

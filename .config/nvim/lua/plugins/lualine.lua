@@ -4,6 +4,16 @@ return {
         require('lualine').setup {
             options = {
                 theme = 'auto',
+                section_separators = {left = '', right = ''},
+                sections = {
+                    lualine_a = {
+                        {
+                            'mode',
+                            separator = { left = '', right = ''},
+                        },
+                    },
+                },
+
             },
         }
     end
