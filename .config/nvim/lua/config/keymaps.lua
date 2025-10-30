@@ -16,6 +16,7 @@ vim.keymap.set("n", "gra", vim.lsp.buf.code_action, {desc="Code [A]ction"})
 vim.keymap.set("n", "gri", vim.lsp.buf.implementation, {desc="[I]mplementation"})
 vim.keymap.set("n", "gre", vim.diagnostic.open_float, {desc="[E]rror"})
 vim.keymap.set("n", "grd", vim.lsp.buf.definition, {desc="[D]efinition"})
+vim.keymap.set("n", "grf", vim.lsp.buf.format, {desc="[F]ormat"})
 
 -- Misc
 vim.keymap.set("n","<esc>","<cmd>nohlsearch<CR>")
